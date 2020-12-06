@@ -11,7 +11,7 @@ Storage Default
 <Value>voiture</Value>
 </Value>
 </Data>
-<DefaultData>creerVoitureDmdeDefaultData</DefaultData>
+<DefaultData>supprimerVoitureDmdeDefaultData</DefaultData>
 <Type>%Storage.Persistent</Type>
 }
 

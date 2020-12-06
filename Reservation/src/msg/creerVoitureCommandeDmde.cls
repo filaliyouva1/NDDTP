@@ -1,7 +1,7 @@
 Class msg.creerVoitureCommandeDmde Extends (Ens.Request, %JSON.Adaptor)
 {
 
-Property voiture As webObjet.wsVoitureCommande;
+Property categorie As webObjet.wsVoitureCommande;
 
 Storage Default
 {
@@ -9,6 +9,9 @@ Storage Default
 <Subscript>"creerVoitureCommandeDmde"</Subscript>
 <Value name="1">
 <Value>voiture</Value>
+</Value>
+<Value name="2">
+<Value>categorie</Value>
 </Value>
 </Data>
 <DefaultData>creerVoitureCommandeDmdeDefaultData</DefaultData>
