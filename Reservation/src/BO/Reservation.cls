@@ -22,9 +22,10 @@ Method creerReservation(pRequest As msg.creerReservationDmde, Output pResponse A
 	set SQLrequest = statement.%Execute()
     do SQLrequest.%Next()
     set plaque = SQLrequest.%Get("plaque")
+
     
     set idVoiture = ##class(data.Voiture).consulterParPlaqueExists(plaque)
-   
+    if (idVoiture){
     set dataVoiture = ##class(data.Voiture).%OpenId(idVoiture)
     set reservation = ##class(data.Reservation).%New()
     set reservation.voiture = dataVoiture
@@ -37,6 +38,10 @@ Method creerReservation(pRequest As msg.creerReservationDmde, Output pResponse A
     else {
         set pResponse.codeRetour = "KO"
     }
+    } else {
+        set pResponse.codeRetour = "KO"
+    }
+    
     
     
     Quit $$$OK
